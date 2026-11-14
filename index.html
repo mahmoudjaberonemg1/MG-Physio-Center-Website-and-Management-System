@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#082b52">
+  <meta name="description" content="MG Physio Center في مركز الواسطى - بني سويف. خدمات العلاج الطبيعي والتأهيل وصحة المرأة.">
+  <title>MG Physio Center | Move Better. Live Better.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#082b52;--blue:#0879cf;--sky:#eaf5fd;--ink:#172b43;--muted:#64758a;--line:#e1eaf2;--white:#fff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:86px}
+    body{margin:0;font-family:"Cairo",Tahoma,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.8}
+    a{color:inherit;text-decoration:none}img{max-width:100%}.wrap{width:min(1160px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:#ffffffed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:11px;color:var(--navy);font-weight:900;line-height:1.2}
+    .brand-mark{width:48px;height:48px;border-radius:15px;background:linear-gradient(145deg,#0b3766,#0879cf);color:white;display:grid;place-items:center;font-size:20px;box-shadow:0 8px 20px #0879cf33}
+    .brand small{display:block;color:var(--blue);font-size:10px;letter-spacing:1px;margin-top:5px}
+    .links{display:flex;gap:19px;align-items:center;font-size:13px;font-weight:700}.links a:hover{color:var(--blue)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:12px;background:var(--blue);color:white;padding:11px 19px;font-weight:800;cursor:pointer;transition:.2s}
+    .btn:hover{background:#0567ad;transform:translateY(-1px)}.btn.light{background:white;color:var(--navy)}.btn.outline{background:transparent;color:white;border:1px solid #ffffff80}
+    .menu{display:none;background:none;border:0;font-size:27px;color:var(--navy);cursor:pointer}
+    .hero{background:radial-gradient(circle at 10% 10%,#14588b 0,transparent 35%),linear-gradient(120deg,#061d39,#0b3d70 70%,#0879b5);color:white;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:42px;align-items:center;padding:62px 0}
+    .eyebrow{display:inline-block;background:#d9efff;color:#07568e;border-radius:30px;padding:5px 13px;font-size:11px;font-weight:900;letter-spacing:.4px}
+    h1{font-size:clamp(35px,5vw,59px);line-height:1.28;margin:18px 0}.hero p{color:#deedfb;max-width:560px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+    .hero-photo{width:100%;display:block;aspect-ratio:1.66;object-fit:cover;object-position:center;border-radius:24px;border:4px solid #ffffff40;box-shadow:0 25px 65px #0005}
+    section{padding:70px 0}.section-head{text-align:center;margin:0 auto 34px;max-width:720px}
+    .section-head h2{font-size:clamp(25px,3vw,34px);color:var(--navy);margin:8px 0}.section-head p{color:var(--muted);margin:0}
+    .kicker{color:var(--blue);font-weight:900;font-size:12px;letter-spacing:.5px}
+    .grid{display:grid;gap:18px}.services{grid-template-columns:repeat(3,1fr)}
+    .card{border:1px solid var(--line);border-radius:18px;padding:22px;background:white;box-shadow:0 8px 25px #12304b08}
+    .icon{height:48px;width:48px;display:grid;place-items:center;background:var(--sky);border-radius:14px;font-size:23px}
+    .card h3{margin:12px 0 5px;color:var(--navy);font-size:17px}.card p{margin:0;color:var(--muted);font-size:13px}
+    .soft{background:#f5f9fc}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+    .about-panel{background:var(--navy);color:white;padding:32px;border-radius:22px}.about-panel p{color:#d6e7f6}
+    .checks{padding:0;list-style:none}.checks li{margin:9px 0}.checks li:before{content:"✓";color:#75ceff;font-weight:900;margin-left:9px}
+    .team-section{background:linear-gradient(180deg,#f6faff,#fff)}
+    .team-frame{max-width:1050px;margin:auto;padding:10px;background:white;border:1px solid var(--line);border-radius:24px;box-shadow:0 18px 55px #09264b16}
+    .team-image{width:100%;height:auto;display:block;border-radius:16px}
+    .team-caption{text-align:center;color:var(--muted);font-size:13px;margin:15px 0 0}
+    .women{background:linear-gradient(120deg,#f0f8fd,#fbf8f5)}
+    .women-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:30px;align-items:center}
+    .women-panel{background:white;border:1px solid var(--line);border-radius:22px;padding:26px}
+    .women-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+    .women-list span{background:#f0f6fa;padding:10px 12px;border-radius:10px;font-size:13px}
+    .booking{background:var(--navy);color:white}.booking .section-head h2{color:white}.booking .section-head p{color:#c6d8e9}
+    .booking-card{max-width:760px;margin:auto;background:white;color:var(--ink);padding:28px;border-radius:20px;text-align:center}
+    .booking-card p{color:var(--muted);margin-top:0}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .contact-item{padding:13px 0;border-bottom:1px solid var(--line);display:flex;gap:10px;align-items:flex-start}
+    .contact-item:last-child{border:0}.contact-item b{color:var(--navy)}
+    .contact-link{color:var(--blue);font-weight:800;text-decoration:underline;text-underline-offset:3px}
+    .social{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+    footer{background:#061a32;color:white;padding:30px 0}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+    footer p{color:#c3d4e5;font-size:12px;margin:4px 0}
+    .small-note{font-size:12px;color:var(--muted)}
+
+    .patient-booking{background:#f4f8fc}
+    .booking-layout{display:grid;grid-template-columns:.78fr 1.22fr;gap:22px;align-items:start}
+    .booking-aside{background:linear-gradient(150deg,#082b52,#0b5794);color:#fff;border-radius:20px;padding:26px}
+    .booking-aside p{color:#d7e8f7;font-size:13px}
+    .booking-form{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:0 10px 28px #12304b0a}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .field{display:flex;flex-direction:column;gap:6px}
+    .field.full{grid-column:1/-1}
+    .field label{font-size:13px;font-weight:800;color:var(--navy)}
+    .field input,.field select,.field textarea{width:100%;border:1px solid #d7e2ec;border-radius:10px;padding:12px;font:inherit;font-size:14px;background:#fff;color:var(--ink)}
+    .field input:focus,.field select:focus,.field textarea:focus{outline:2px solid #9bd5ff;border-color:var(--blue)}
+    .form-note{font-size:11px;color:var(--muted);margin:12px 0}
+    @media(max-width:700px){.booking-layout{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}}
+
+    @media(max-width:850px){.links{gap:11px;font-size:12px}.nav>.btn{padding:9px 12px}.hero-grid{gap:25px}.services{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:700px){
+      .links{display:none;position:absolute;top:76px;right:0;left:0;background:white;padding:18px 5%;flex-direction:column;align-items:stretch;border-bottom:1px solid var(--line);box-shadow:0 12px 20px #0001}
+      .links.open{display:flex}.links a{padding:8px}.menu{display:block}.nav>.btn{display:none}
+      .hero-grid,.about-grid,.women-grid,.contact-grid{grid-template-columns:1fr}.hero-grid{padding:42px 0}.hero-photo{aspect-ratio:1.45}
+      section{padding:52px 0}.team-frame{padding:6px;border-radius:16px}.team-image{border-radius:11px}
+    }
+    @media(max-width:430px){.services{grid-template-columns:1fr}.women-list{grid-template-columns:1fr}.hero-actions .btn{width:100%}.booking-card{padding:22px 16px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="MG Physio Center - الرئيسية"><span class="brand-mark">MG</span><span>MG PHYSIO CENTER<small>MOVE BETTER. LIVE BETTER.</small></span></a>
+    <button class="menu" aria-label="فتح القائمة" aria-expanded="false" onclick="toggleMenu(this)">☰</button>
+    <nav class="links" id="siteNav">
+      <a href="#home">الرئيسية</a><a href="#about">عن المركز</a><a href="#services">الخدمات</a><a href="#team">فريقنا</a><a href="#women">صحة المرأة</a><a href="#patient-booking">حجز المريض</a><a href="#contact">تواصل معنا</a><a href="dashboard.html">لوحة النظام</a>
+    </nav>
+    <a class="btn" href="#booking">احجز موعدك</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">PHYSIOTHERAPY & REHABILITATION</span>
+        <h1>حركتك أفضل،<br><span style="color:#8bd3ff">حياتك أفضل.</span></h1>
+        <p>في MG Physio Center نهتم بمساعدتك على استعادة الحركة وتحسين جودة حياتك من خلال خدمات العلاج الطبيعي والتأهيل، مع الاهتمام بكل حالة وخطتها العلاجية.</p>
+        <div class="hero-actions"><a class="btn light" href="#booking">احجز موعدك الآن</a><a class="btn outline" href="#services">اكتشف خدماتنا</a></div>
+      </div>
+      <div><img class="hero-photo" src="assets/mg-team.jpg" alt="صورة فريق MG Physio Center المكوّن من ثلاثة أعضاء"></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about-grid">
+      <div>
+        <span class="kicker">ABOUT MG</span><h2 style="color:var(--navy);font-size:30px;margin:8px 0">عن MG Physio Center</h2>
+        <p>مركز للعلاج الطبيعي والتأهيل يهدف إلى دعم الحركة والقدرة الوظيفية وتحسين جودة الحياة، من خلال خدمات تأهيل متنوعة وخطة تناسب احتياجات كل مراجع.</p>
+        <p class="small-note">يتم تحديد الخطة العلاجية المناسبة بعد التقييم بواسطة المختص.</p>
+      </div>
+      <div class="about-panel"><h3>Move Better. Live Better.</h3><p>رعايتك تبدأ بفهم احتياجاتك، وتستمر بخطة واضحة ومتابعة لتطورك.</p>
+        <ul class="checks"><li>تقييم للحالة والقدرات الحركية</li><li>خطة تأهيل مناسبة للأهداف</li><li>متابعة التقدم خلال الجلسات</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft" id="services">
+    <div class="wrap">
+      <div class="section-head"><span class="kicker">OUR SERVICES</span><h2>خدمات العلاج الطبيعي</h2><p>مجالات التأهيل والخدمات التي يمكنك الاستفسار عنها في المركز.</p></div>
+      <div class="grid services">
+        <article class="card"><div class="icon">🦴</div><h3>العلاج الطبيعي للعظام</h3><p>تأهيل آلام ومشكلات العضلات والمفاصل وتحسين الحركة.</p></article>
+        <article class="card"><div class="icon">🧠</div><h3>التأهيل العصبي</h3><p>برامج لتحسين التوازن والتحكم الحركي والقدرات الوظيفية.</p></article>
+        <article class="card"><div class="icon">🏃</div><h3>التأهيل الرياضي</h3><p>المساعدة في استعادة الأداء الحركي بعد الإصابات الرياضية.</p></article>
+        <article class="card"><div class="icon">🧒</div><h3>علاج طبيعي للأطفال</h3><p>تأهيل حركي للأطفال وفق احتياجات كل حالة.</p></article>
+        <article class="card"><div class="icon">🩹</div><h3>التأهيل بعد العمليات</h3><p>استعادة الحركة والوظيفة بعد العمليات وفق تعليمات الطبيب.</p></article>
+        <article class="card"><div class="icon">🤲</div><h3>العلاج اليدوي</h3><p>تقنيات علاجية يحدد المختص ملاءمتها بعد التقييم.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="team-section" id="team">
+    <div class="wrap">
+      <div class="section-head"><span class="kicker">OUR PROFESSIONAL TEAM</span><h2>فريق MG الطبي</h2><p>صورتكم الثلاثية ظاهرة هنا بشكل كبير وواضح، مع الحفاظ على الصورة الأصلية التي أرسلتها.</p></div>
+      <div class="team-frame"><img class="team-image" src="assets/mg-team.jpg" alt="أعضاء فريق MG Physio Center الثلاثة مع شعار المركز"></div>
+      <p class="team-caption">MG Physio Center · Move Better. Live Better.</p>
+    </div>
+  </section>
+
+  <section class="women" id="women">
+    <div class="wrap women-grid">
+      <div><span class="kicker">WOMEN'S HEALTH PHYSIOTHERAPY</span><h2 style="color:var(--navy);font-size:30px">العلاج الطبيعي لصحة المرأة</h2>
+        <p>قسم مستقل يراعي الخصوصية والاحتياجات الخاصة بصحة المرأة، مع إمكانية طلب أخصائية عند حجز الموعد.</p>
+      </div>
+      <div class="women-panel"><h3 style="color:var(--navy);margin-top:0">الخدمات المتاحة بالقسم</h3>
+        <div class="women-list">
+          <span>تأهيل عضلات قاع الحوض</span><span>العلاج الطبيعي أثناء الحمل</span>
+          <span>التأهيل بعد الولادة</span><span>تأهيل انفصال عضلات البطن</span>
+          <span>تأهيل سلس البول</span><span>التعامل مع آلام الحوض</span>
+          <span>التأهيل بعد الولادة القيصرية</span>
+        </div>
+        <p class="small-note">يتم تقييم الحالة وتحديد مدى ملاءمة الخدمة بواسطة المختص.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="patient-booking" id="patient-booking">
+    <div class="wrap">
+      <div class="section-head"><span class="kicker">PATIENT APPOINTMENT</span><h2>قائمة حجز المريض</h2><p>املأ البيانات الأساسية، وسيتم تجهيز رسالة الحجز لإرسالها إلى المركز على واتساب.</p></div>
+      <div class="booking-layout">
+        <aside class="booking-aside">
+          <h3 style="margin-top:0">احجز جلستك في MG</h3>
+          <p>اختر الخدمة والموعد المناسب، وسيتواصل معك المركز لتأكيد الحجز حسب المواعيد المتاحة.</p>
+          <ul class="checks">
+            <li>تحديد نوع الخدمة المطلوبة</li>
+            <li>اختيار التاريخ والوقت المفضل</li>
+            <li>إمكانية طلب أخصائية لقسم صحة المرأة</li>
+          </ul>
+          <p style="font-size:12px">الحجز لا يصبح مؤكدًا إلا بعد رد المركز عليك.</p>
+        </aside>
+        <form class="booking-form" id="patientBookingForm">
+          <h3 style="color:var(--navy);margin-top:0">بيانات المريض</h3>
+          <div class="form-grid">
+            <div class="field"><label for="patientName">اسم المريض بالكامل *</label><input id="patientName" name="patientName" required autocomplete="name" placeholder="اكتب الاسم"></div>
+            <div class="field"><label for="patientPhone">رقم الهاتف *</label><input id="patientPhone" name="patientPhone" required type="tel" inputmode="tel" autocomplete="tel" placeholder="01xxxxxxxxx"></div>
+            <div class="field"><label for="patientService">الخدمة المطلوبة *</label>
+              <select id="patientService" name="patientService" required>
+                <option value="">اختر الخدمة</option>
+                <option>العلاج الطبيعي للعظام</option><option>التأهيل العصبي</option><option>التأهيل الرياضي</option><option>العلاج الطبيعي للأطفال</option><option>التأهيل بعد العمليات</option><option>العلاج اليدوي</option><option>صحة المرأة</option>
+              </select>
+            </div>
+            <div class="field"><label for="patientTherapist">تفضيل المعالج</label>
+              <select id="patientTherapist" name="patientTherapist">
+                <option>لا يوجد تفضيل</option><option>أخصائي</option><option>أخصائية</option>
+              </select>
+            </div>
+            <div class="field"><label for="patientDate">التاريخ المفضل *</label><input id="patientDate" name="patientDate" type="date" required></div>
+            <div class="field"><label for="patientTime">الوقت المفضل</label><select id="patientTime" name="patientTime"><option>أي وقت متاح</option><option>صباحًا</option><option>ظهرًا</option><option>مساءً</option></select></div>
+            <div class="field full"><label for="patientNotes">ملاحظات اختيارية</label><textarea id="patientNotes" name="patientNotes" rows="3" placeholder="اكتب أي تفاصيل غير حساسة تساعدنا في التواصل معك"></textarea></div>
+          </div>
+          <p class="form-note">يرجى عدم كتابة تشخيصات أو معلومات طبية حساسة هنا. عند الضغط على إرسال، سيتم فتح واتساب برسالة تحتوي على البيانات المدخلة لمراجعتها وإرسالها بنفسك.</p>
+          <button class="btn" type="submit" style="width:100%">إرسال طلب الحجز عبر واتساب</button>
+          <p id="bookingFeedback" class="small-note" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking" id="booking">
+    <div class="wrap">
+      <div class="section-head"><span class="kicker" style="color:#9bdcff">APPOINTMENTS</span><h2>حجز واستفسار</h2><p>للحجز أو معرفة المواعيد المتاحة، تواصل مباشرة مع المركز.</p></div>
+      <div class="booking-card">
+        <h3 style="margin-top:0;color:var(--navy)">يسعدنا استقبال استفسارك</h3>
+        <p>اتصل بالمركز لتحديد الخدمة المناسبة والموعد المتاح. ولحجز خدمات صحة المرأة يمكنك طلب أخصائية عند التواصل.</p>
+        <a class="btn" href="tel:01063709288">☎ اتصل الآن: 01063709288</a>
+        <p class="small-note" style="margin:14px 0 0">لا يتم إرسال أو حفظ بيانات صحية من خلال هذا الموقع.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-head"><span class="kicker">CONTACT US</span><h2>تواصل معنا</h2><p>نحن هنا للإجابة عن استفساراتك ومساعدتك في الوصول إلى المركز.</p></div>
+      <div class="grid contact-grid">
+        <div class="card">
+          <h3 style="margin-top:0">بيانات المركز</h3>
+          <div class="contact-item"><span>📍</span><div><b>العنوان</b><br>بني سويف – مركز الواسطى – شارع أحمد عرابي</div></div>
+          <div class="contact-item"><span>☎️</span><div><b>الهاتف</b><br><a class="contact-link" href="tel:01063709288" dir="ltr">01063709288</a></div></div>
+          <div class="contact-item"><span>🕒</span><div><b>مواعيد العمل</b><br>يرجى الاتصال بالمركز لمعرفة المواعيد المتاحة.</div></div>
+          <div class="social"><a class="btn" href="https://www.facebook.com/share/1ENtN8Ps1s/" target="_blank" rel="noopener noreferrer">صفحتنا على Facebook ↗</a><a class="btn outline" style="color:var(--navy);border-color:#b9cad9" href="https://www.google.com/maps/search/?api=1&query=بني+سويف+مركز+الواسطى+شارع+أحمد+عرابي" target="_blank" rel="noopener noreferrer">ابحث عن العنوان على الخريطة ↗</a></div>
+        </div>
+        <div class="card"><h3 style="margin-top:0">كيف تصل إلينا؟</h3><p>العنوان: شارع أحمد عرابي، مركز الواسطى، محافظة بني سويف.</p><p>يمكنك الاتصال هاتفيًا قبل الحضور للتأكد من المواعيد وتفاصيل الخدمة.</p><a class="contact-link" href="tel:01063709288">اتصل بالمركز الآن</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap footer-row">
+  <div><strong>MG PHYSIO CENTER</strong><p>Move Better. Live Better.</p></div>
+  <div><p>بني سويف – مركز الواسطى – شارع أحمد عرابي</p><p><a href="tel:01063709288">01063709288</a> · <a href="https://www.facebook.com/share/1ENtN8Ps1s/" target="_blank" rel="noopener noreferrer">Facebook</a></p></div>
+  <p>© <span id="year"></span> MG Physio Center</p>
+</div></footer>
+<script>
+  function toggleMenu(button){
+    const nav=document.getElementById('siteNav');
+    const opened=nav.classList.toggle('open');
+    button.setAttribute('aria-expanded',String(opened));
+  }
+  document.querySelectorAll('#siteNav a').forEach(link=>link.addEventListener('click',()=>{
+    document.getElementById('siteNav').classList.remove('open');
+    document.querySelector('.menu').setAttribute('aria-expanded','false');
+  }));
+  document.getElementById('year').textContent=new Date().getFullYear();
+
+  const patientForm=document.getElementById('patientBookingForm');
+  patientForm.addEventListener('submit',function(event){
+    event.preventDefault();
+    if(!patientForm.reportValidity()) return;
+    const data=new FormData(patientForm);
+    const lines=[
+      'طلب حجز جديد - MG Physio Center',
+      'اسم المريض: '+data.get('patientName'),
+      'رقم الهاتف: '+data.get('patientPhone'),
+      'الخدمة: '+data.get('patientService'),
+      'تفضيل المعالج: '+data.get('patientTherapist'),
+      'التاريخ المفضل: '+data.get('patientDate'),
+      'الوقت المفضل: '+data.get('patientTime'),
+      'ملاحظات: '+(data.get('patientNotes')||'لا توجد')
+    ];
+    const message=encodeURIComponent(lines.join('\\n'));
+    const feedback=document.getElementById('bookingFeedback');
+    feedback.textContent='سيتم فتح واتساب. راجع الرسالة واضغط إرسال لإرسال طلبك للمركز.';
+    window.open('https://wa.me/201063709288?text='+message,'_blank','noopener');
+  });
+
+</script>
+</body>
+</html>

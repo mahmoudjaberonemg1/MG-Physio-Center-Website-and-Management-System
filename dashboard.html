@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>لوحات MG Physio Center — نموذج تجريبي</title>
+<style>
+:root{--navy:#123047;--teal:#0d9488;--bg:#f3f7f8;--ink:#20313d;--muted:#71808b;--line:#e3eaed;--white:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Tahoma,Arial,sans-serif;color:var(--ink)}
+header{background:linear-gradient(115deg,#123047,#176b72);color:white;padding:22px 5%;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+.brand{font-size:22px;font-weight:800}.sub{font-size:12px;opacity:.8;margin-top:5px}
+main{max-width:1180px;margin:24px auto;padding:0 16px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+h1{font-size:23px;margin:0 0 6px}.muted{color:var(--muted);font-size:13px}
+select,input,textarea,button{font:inherit;border-radius:10px;border:1px solid var(--line);padding:10px;background:white;color:var(--ink)}
+button{cursor:pointer;background:var(--teal);color:white;border:0;font-weight:700}button.secondary{background:#e8f1f3;color:var(--navy)}button.danger{background:#b54747}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}.tabs button{background:#e4edef;color:var(--navy)}.tabs button.active{background:var(--navy);color:white}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}.stat,.panel,.card{background:white;border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:0 3px 12px #17364a08}
+.stat strong{display:block;font-size:25px;color:var(--navy);margin-top:8px}
+.grid{display:grid;grid-template-columns:1.3fr .7fr;gap:14px}.panel h2{font-size:17px;margin:0 0 14px}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:right;padding:12px 8px;border-bottom:1px solid var(--line);vertical-align:middle}th{color:var(--muted);font-weight:600}
+.pill{display:inline-block;border-radius:30px;padding:5px 9px;font-size:11px;background:#fff3d8;color:#8a5a00}.ok{background:#dff5ed;color:#137454}.no{background:#fde8e8;color:#a33}
+.actions{display:flex;gap:6px;flex-wrap:wrap}.actions button{padding:7px 9px;font-size:11px}
+.field{display:grid;gap:6px;margin:10px 0}.field label{font-size:12px;color:var(--muted)}textarea{min-height:82px;resize:vertical}
+.notice{background:#fff8e8;border:1px solid #f1dfb5;padding:12px;border-radius:12px;font-size:12px;line-height:1.8;margin:14px 0}
+.item{padding:11px 0;border-bottom:1px solid var(--line);font-size:13px;line-height:1.7}.item:last-child{border:0}
+.hidden{display:none}.footer{margin:24px 0;color:var(--muted);font-size:11px;text-align:center}
+@media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}table{min-width:650px}.tablewrap{overflow:auto}}
+</style></head>
+<body>
+<header><div><div class="brand">MG Physio Center</div><div class="sub">نظام إدارة المركز — نموذج واجهات تجريبي</div></div><div><span style="font-size:12px">عرض تجريبي للواجهة فقط</span></div></header>
+<main>
+<div class="top"><div><h1 id="pageTitle">لوحة تحكم المالك</h1><div class="muted">إدارة الحجوزات والفريق وملفات المرضى</div></div>
+<select id="role" aria-label="اختيار نوع الحساب"><option value="owner">المالك</option><option value="doctor">الدكتور</option><option value="patient">المريض</option></select></div>
+<div class="tabs" id="tabs"></div>
+<div id="ownerView">
+<div class="stats"><div class="stat">إجمالي الحجوزات<strong id="total">4</strong></div><div class="stat">طلبات جديدة<strong id="pending">2</strong></div><div class="stat">حجوزات مؤكدة<strong id="confirmed">1</strong></div><div class="stat">تقييمات بانتظار المراجعة<strong>2</strong></div></div>
+<div class="grid"><section class="panel"><h2>طلبات الحجز</h2><div class="tablewrap"><table><thead><tr><th>المريض</th><th>الخدمة</th><th>الموعد المطلوب</th><th>الحالة</th><th>الإجراء</th></tr></thead><tbody id="bookingRows"></tbody></table></div></section>
+<section class="panel"><h2>الفريق الطبي</h2><div class="item"><b>Doctor 1</b><br><span class="muted">حساب دكتور تجريبي</span></div><div class="item"><b>Doctor 2</b><br><span class="muted">حساب دكتور تجريبي</span></div><div class="item"><b>Doctor 3</b><br><span class="muted">حساب دكتور تجريبي</span></div><h2 style="margin-top:18px">تقييمات المرضى</h2><div class="item">★★★★★ — تعامل ممتاز، شكرًا للفريق <button class="secondary" onclick="alert('تمت الموافقة في النموذج التجريبي')">مراجعة</button></div><div class="item">★★★★☆ — المكان منظم <button class="secondary" onclick="alert('تمت الموافقة في النموذج التجريبي')">مراجعة</button></div></section></div>
+</div>
+<div id="doctorView" class="hidden"><div class="stats"><div class="stat">مرضاي<strong>8</strong></div><div class="stat">جلسات اليوم<strong>4</strong></div><div class="stat">مواعيد قادمة<strong>3</strong></div><div class="stat">تقارير مطلوبة<strong>1</strong></div></div>
+<div class="grid"><section class="panel"><h2>جدول المواعيد</h2><div class="item"><b>10:00 ص — أحمد محمد</b><br>تأهيل بعد العمليات · جلسة 3</div><div class="item"><b>11:30 ص — سارة علي</b><br>علاج طبيعي للعظام · جلسة 5</div><div class="item"><b>01:00 م — محمود حسن</b><br>تأهيل رياضي · جلسة 2</div></section>
+<section class="panel"><h2>تسجيل ملاحظات جلسة</h2><div class="field"><label>اسم/كود المريض</label><input placeholder="مثال: Patient 001"></div><div class="field"><label>رقم الجلسة</label><input type="number" placeholder="3"></div><div class="field"><label>ملاحظات الجلسة</label><textarea placeholder="الأعراض، الاستجابة للعلاج، التمارين..."></textarea></div><button onclick="alert('تم حفظ الملاحظة في العرض التجريبي فقط')">حفظ الملاحظة التجريبية</button></section></div></div>
+<div id="patientView" class="hidden"><div class="stats"><div class="stat">مواعيدي<strong>2</strong></div><div class="stat">الجلسات المكتملة<strong>4</strong></div><div class="stat">الجلسات المتبقية<strong>6</strong></div><div class="stat">تقييم المركز<strong>—</strong></div></div>
+<div class="grid"><section class="panel"><h2>ملخص رحلتك العلاجية</h2><div class="item"><b>الخدمة:</b> علاج طبيعي للعظام</div><div class="item"><b>المعالج:</b> Doctor 1</div><div class="item"><b>الموعد القادم:</b> الأحد — 5:00 مساءً</div><div class="item"><b>الخطة:</b> 10 جلسات — مكتمل 4</div></section>
+<section class="panel"><h2>إرسال تقييم</h2><div class="field"><label>التقييم</label><select id="stars"><option>★★★★★ — 5 نجوم</option><option>★★★★☆ — 4 نجوم</option><option>★★★☆☆ — 3 نجوم</option><option>★★☆☆☆ — نجمتان</option><option>★☆☆☆☆ — نجمة</option></select></div><div class="field"><label>تعليقك</label><textarea placeholder="اكتب رأيك في تجربتك..."></textarea></div><button onclick="alert('شكرًا لتقييمك — في النظام الفعلي سيصل للمراجعة')">إرسال التقييم</button></section></div></div>
+<div class="notice"><b>مهم جدًا:</b> ده نموذج تجريبي لتصميم الشاشات وتوضيح الصلاحيات وسير العمل. تسجيل الدخول والحجوزات والحفظ والإشعارات هنا غير متصلة بقاعدة بيانات حقيقية. لا تدخل بيانات مرضى حقيقية. تفعيل النظام الفعلي يحتاج Backend وقاعدة بيانات وصلاحيات آمنة وربط WhatsApp Business API.</div>
+<div class="footer">MG Physio Center © — Prototype v1</div>
+</main>
+<script>
+const bookings=[
+ {name:"أحمد محمد",service:"علاج طبيعي للعظام",date:"الأحد 5:00 م",status:"جديد"},
+ {name:"سارة علي",service:"Women's Health",date:"الإثنين 6:00 م",status:"جديد"},
+ {name:"محمود حسن",service:"تأهيل رياضي",date:"الثلاثاء 4:00 م",status:"مؤكد"},
+ {name:"منى إبراهيم",service:"تأهيل بعد العمليات",date:"الأربعاء 7:00 م",status:"مرفوض"}
+];
+function draw(){document.getElementById('bookingRows').innerHTML=bookings.map((b,i)=>`<tr><td>${b.name}</td><td>${b.service}</td><td>${b.date}</td><td><span class="pill ${b.status==='مؤكد'?'ok':b.status==='مرفوض'?'no':''}">${b.status}</span></td><td><div class="actions"><button onclick="setStatus(${i},'مؤكد')">قبول</button><button class="danger" onclick="setStatus(${i},'مرفوض')">رفض</button></div></td></tr>`).join('');document.getElementById('total').textContent=bookings.length;document.getElementById('pending').textContent=bookings.filter(x=>x.status==='جديد').length;document.getElementById('confirmed').textContent=bookings.filter(x=>x.status==='مؤكد').length}
+function setStatus(i,s){bookings[i].status=s;draw()}
+function showRole(){let r=document.getElementById('role').value;document.getElementById('ownerView').classList.toggle('hidden',r!=='owner');document.getElementById('doctorView').classList.toggle('hidden',r!=='doctor');document.getElementById('patientView').classList.toggle('hidden',r!=='patient');document.getElementById('pageTitle').textContent=r==='owner'?'لوحة تحكم المالك':r==='doctor'?'لوحة الدكتور':'حساب المريض';}
+document.getElementById('role').addEventListener('change',showRole);draw();showRole();
+</script></body></html>
