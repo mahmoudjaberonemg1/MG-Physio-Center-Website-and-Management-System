@@ -6,6 +6,7 @@
   <meta name="theme-color" content="#082b52">
   <meta name="description" content="MG Physio Center في مركز الواسطى - بني سويف. خدمات العلاج الطبيعي والتأهيل وصحة المرأة.">
   <title>MG Physio Center | Move Better. Live Better.</title>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -105,7 +106,7 @@
         <p>في MG Physio Center نهتم بمساعدتك على استعادة الحركة وتحسين جودة حياتك من خلال خدمات العلاج الطبيعي والتأهيل، مع الاهتمام بكل حالة وخطتها العلاجية.</p>
         <div class="hero-actions"><a class="btn light" href="#booking">احجز موعدك الآن</a><a class="btn outline" href="#services">اكتشف خدماتنا</a></div>
       </div>
-      <div><img class="hero-photo" src="mg-team.jpg" alt="صورة فريق MG Physio Center المكوّن من ثلاثة أعضاء"></div>
+      <div><img class="hero-photo" src="assets/mg-team.jpg" alt="صورة فريق MG Physio Center المكوّن من ثلاثة أعضاء"></div>
     </div>
   </section>
 
@@ -139,7 +140,7 @@
   <section class="team-section" id="team">
     <div class="wrap">
       <div class="section-head"><span class="kicker">OUR PROFESSIONAL TEAM</span><h2>فريق MG الطبي</h2><p>صورتكم الثلاثية ظاهرة هنا بشكل كبير وواضح، مع الحفاظ على الصورة الأصلية التي أرسلتها.</p></div>
-      <div class="team-frame"><img class="team-image" src="mg-team.jpg" alt="أعضاء فريق MG Physio Center الثلاثة مع شعار المركز"></div>
+      <div class="team-frame"><img class="team-image" src="assets/mg-team.jpg" alt="أعضاء فريق MG Physio Center الثلاثة مع شعار المركز"></div>
       <p class="team-caption">MG Physio Center · Move Better. Live Better.</p>
     </div>
   </section>
@@ -164,7 +165,7 @@
 
   <section class="patient-booking" id="patient-booking">
     <div class="wrap">
-      <div class="section-head"><span class="kicker">PATIENT APPOINTMENT</span><h2>قائمة حجز المريض</h2><p>املأ البيانات الأساسية، وسيتم تجهيز رسالة الحجز لإرسالها إلى المركز على واتساب.</p></div>
+      <div class="section-head"><span class="kicker">PATIENT APPOINTMENT</span><h2>قائمة حجز المريض</h2><p>املأ البيانات الأساسية بعد تسجيل الدخول، وسيصل طلبك مباشرة إلى لوحة إدارة المركز.</p></div>
       <div class="booking-layout">
         <aside class="booking-aside">
           <h3 style="margin-top:0">احجز جلستك في MG</h3>
@@ -174,7 +175,7 @@
             <li>اختيار التاريخ والوقت المفضل</li>
             <li>إمكانية طلب أخصائية لقسم صحة المرأة</li>
           </ul>
-          <p style="font-size:12px">الحجز لا يصبح مؤكدًا إلا بعد رد المركز عليك.</p>
+          <p style="font-size:12px">الحجز لا يصبح مؤكدًا إلا بعد موافقة إدارة المركز. يلزم تسجيل الدخول بحساب مريض لإرسال الطلب.</p>
         </aside>
         <form class="booking-form" id="patientBookingForm">
           <h3 style="color:var(--navy);margin-top:0">بيانات المريض</h3>
@@ -196,8 +197,8 @@
             <div class="field"><label for="patientTime">الوقت المفضل</label><select id="patientTime" name="patientTime"><option>أي وقت متاح</option><option>صباحًا</option><option>ظهرًا</option><option>مساءً</option></select></div>
             <div class="field full"><label for="patientNotes">ملاحظات اختيارية</label><textarea id="patientNotes" name="patientNotes" rows="3" placeholder="اكتب أي تفاصيل غير حساسة تساعدنا في التواصل معك"></textarea></div>
           </div>
-          <p class="form-note">يرجى عدم كتابة تشخيصات أو معلومات طبية حساسة هنا. عند الضغط على إرسال، سيتم فتح واتساب برسالة تحتوي على البيانات المدخلة لمراجعتها وإرسالها بنفسك.</p>
-          <button class="btn" type="submit" style="width:100%">إرسال طلب الحجز عبر واتساب</button>
+          <p class="form-note">يرجى عدم كتابة تشخيصات أو معلومات طبية حساسة هنا. سيتم حفظ طلب الحجز في قاعدة بيانات المركز بعد تسجيل الدخول.</p>
+          <button class="btn" type="submit" style="width:100%">إرسال طلب الحجز للمركز</button>
           <p id="bookingFeedback" class="small-note" role="status" aria-live="polite"></p>
         </form>
       </div>
@@ -250,27 +251,26 @@
   }));
   document.getElementById('year').textContent=new Date().getFullYear();
 
+  const SUPABASE_URL='https://pvzsnmwakelhxzetbly.supabase.co';
+  const SUPABASE_PUBLISHABLE_KEY='sb_publishable_Ej5ISzL3gpmErZHPzon5Vw_2HjNiRF5';
+  const mgDb=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);
   const patientForm=document.getElementById('patientBookingForm');
-  patientForm.addEventListener('submit',function(event){
+  patientForm.addEventListener('submit',async function(event){
     event.preventDefault();
     if(!patientForm.reportValidity()) return;
-    const data=new FormData(patientForm);
-    const lines=[
-      'طلب حجز جديد - MG Physio Center',
-      'اسم المريض: '+data.get('patientName'),
-      'رقم الهاتف: '+data.get('patientPhone'),
-      'الخدمة: '+data.get('patientService'),
-      'تفضيل المعالج: '+data.get('patientTherapist'),
-      'التاريخ المفضل: '+data.get('patientDate'),
-      'الوقت المفضل: '+data.get('patientTime'),
-      'ملاحظات: '+(data.get('patientNotes')||'لا توجد')
-    ];
-    const message=encodeURIComponent(lines.join('\\n'));
     const feedback=document.getElementById('bookingFeedback');
-    feedback.textContent='سيتم فتح واتساب. راجع الرسالة واضغط إرسال لإرسال طلبك للمركز.';
-    window.open('https://wa.me/201063709288?text='+message,'_blank','noopener');
+    feedback.textContent='جارٍ إرسال طلب الحجز...';
+    const {data:{user},error:authError}=await mgDb.auth.getUser();
+    if(authError||!user){feedback.textContent='لإرسال الحجز، سجّل الدخول أو أنشئ حساب مريض أولًا.';window.location.href='dashboard.html';return;}
+    const data=new FormData(patientForm);
+    const {error:profileError}=await mgDb.from('profiles').update({full_name:String(data.get('patientName')).trim(),phone:String(data.get('patientPhone')).trim()}).eq('id',user.id);
+    if(profileError){feedback.textContent='تعذر تحديث بيانات الحساب: '+profileError.message;return;}
+    const {error}=await mgDb.from('appointments').insert({patient_id:user.id,service:data.get('patientService'),therapist_preference:data.get('patientTherapist'),preferred_date:data.get('patientDate'),preferred_time:data.get('patientTime'),notes:String(data.get('patientNotes')||'').trim()||null});
+    if(error){feedback.textContent='تعذر إرسال الحجز: '+error.message;return;}
+    feedback.textContent='تم إرسال طلبك بنجاح إلى المركز. يمكنك متابعة حالته من لوحة المريض.';
+    patientForm.reset();
   });
 
 </script>
 </body>
-      </html>
+</html>
